@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git e Github</title>
+</head>
+<body style="background-color: pink;">
+    <header>
+        <nav>
+       
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html" style="background-color: palevioletred;">Home</a>
+                </li>
+                <li class="nav-item"><a href="hospedagem.html" class="nav-link active" aria-current="page" style="background-color:palevioletred;">Hospedagem</a></li>
+                <li class="nav-item"><a href="gitgithub.html" class="nav-link active" aria-current="page" style="background-color:palevioletred;">Git e Github</a></li>
+                <li class="nav-item"><a href="githubpages.html" class="nav-link active" aria-current="page" style="background-color:palevioletred;">Github Pages</a></li>
+                <li class="nav-item"><a href="portifolio.html" class="nav-link active" aria-current="page" style="background-color: palevioletred;">Portifólio</a></li></ul>
+    </nav>
+    </header>
+    <hr>
+    <h1 style="background-color: palevioletred;">Git e Github</h1>
+
+    <h1 style="background-color: palevioletred;">Git</h1>
+    <p>O Git consiste em uma ferramenta de versionamento local,que salva o estado de cada arquivo na hora do versionamento e caso o arquivo não sofra a alteração ele cria um link simbólico para o arquivo que não foi editado.</p>
+
+    <h1 style="background-color: palevioletred;">Github</h1>
+    <p>O Github é um serviço web compartilhado para projetos que utilizam a ferramenta do Git para realizae o versionamento.É um local para armazenar códigos.</p>
+
+<h1 style="background-color: palevioletred;">LEMBRE-SE :</h1>
+<b style="color:mediumvioletred">O Git funciona sem o Github,já o Github NÃO funciona sem o Git</b>
+
+<h1 style="background-color: palevioletred;">Como configurá-los </h1>
+<p>Após criar sua conta no Github deverá configurá-lo com a chave SSH</p>
+<ul>
+<li>Dentro do Git verifique se existe a chave SSH : ls -al ~/.ssh </li>
+    <li>Adicione uma nova chave,colocando seu E-Mail : (ID)ssh-keygen -t ed25519 -C "seu_email@exemplo.com"</li>
+    <li>Inicialize o agente-ss  : eval "$(ssh-agent -s)"</li>
+    <li>Adicione chave ssh ao agente : ssh-add ~/.ssh/id_ed25519</li>
+<li>Copie a chave ssh : clip < ~/.ssh/id_ed25519.pub</li>
+<li>Adicionar chave no github : Github > settings > SSH and GPG keys > New SSH key > Colar *Coloque u título que identifique a chave*</li>
+<li>Teste a conexão : ssh -T git@github.com > yes</li>
+</ul>
+<h1 style="background-color: palevioletred;">Como criar um repositório e como cloná-lo </h1>
+<p>Para colocar seu projeto dentro do Github você precisará criar um repositório no qual ele ficará armazenado.</p>
+<ul><li>Para isso,dentro do Github basta clicar no canto superior da página onde terá um ícone de "+" e selecione "Novo repositório";</li> 
+   <li>Depois didgte o nome para o seu repositório e crie uma breve descrição;</li> 
+   <li>Escolha a visibilidade dele(se ele vai ser público ou privado);</li>
+   <li>Selecione Inicializar este repositório com um README;</li>
+   <li>Clique em Criar repositório.</li>
+ 
+</ul>
+<p>Dentro do Github é possível clonar seu repositório para criar uma cópia local no seu computador e sincronizar entre os dois locais.</p>
+<ul>
+    <li>Dentro do Github,vá até a página principal do repositório;</li>
+    <li>Acima da lista de arquivos, clique em  "< >Código";</li>
+    <li>Copie a URL do repositório.</li>
+    <li>Abra Git Bash e altere o diretório de trabalho atual para o local em que deseja ter o diretório clonado.Para isso digite "git clone" e a url copiado ao lado;</li>
+    <li>Pressione ENTER para criar seu clone local.</li>
+
+</ul>
+</body>
+</html>
